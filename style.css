@@ -1,0 +1,185 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* custom css  */
+
+/* style-guide fonts */
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400 600 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* style guide colors & fonts*/
+:root {
+  --white: hsl(0, 0%, 100%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(327, 44%, 95%);
+
+  --spacing-1600: 128px;
+  --spacing-600: 48px;
+  --spacing-500: 40px;
+  --spacing-400: 32px;
+  --spacing-300: 24px;
+  --spacing-200: 16px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+}
+
+body {
+  background-color: var(--stone-100);
+  color: var(--stone-600);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-600) var(--spacing-600);
+}
+
+main {
+  background-color: var(--white);
+  max-width: 736px;
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--spacing-300);
+}
+
+h1 {
+  font-family: "young serif", sans-serif;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: var(--stone-900);
+  margin-bottom: var(--spacing-200);
+}
+
+h2 {
+  font-family: "young serif", sans-serif;
+  font-size: 1.75rem;
+  line-height: 100%;
+  color: var(--brown-800);
+  margin-bottom: var(--spacing-200);
+}
+
+h3 {
+  font-family: "outfit", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--rose-800);
+  margin-bottom: var(--spacing-200);
+}
+
+span {
+  font-weight: 700;
+}
+
+.top-image img {
+  border-radius: var(--spacing-150);
+}
+
+main > * {
+  margin-bottom: var(--spacing-400);
+}
+
+.preparation-time {
+  background-color: var(--rose-50);
+  border-radius: var(--spacing-100);
+  padding: var(--spacing-200);
+}
+
+ul,
+ol {
+  line-height: 2;
+}
+
+ul li::marker,
+ol li::marker {
+  color: var(--brown-800);
+  font-weight: 700;
+}
